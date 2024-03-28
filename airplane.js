@@ -34,11 +34,14 @@ function playSound(velocidade, altitude) {
         if (velocidade >= 150) {
             console.log(keep)
             keeplandingAudio.play()
+            alert('Keep Landing (Auto Pilot Disconnected)')
         }
 
         else {
             console.log(low),
-                airspeedlowAudio.play()
+            airspeedlowAudio.play()
+            alert('Airspeed Low, Airspeed Low!')
+
         }
     }
 
@@ -47,21 +50,25 @@ function playSound(velocidade, altitude) {
         if (altitude >= 400 ) {
             console.log(glideslope)
             glideslopeAudio.play()
+            alert('Glideslope (out of route)')
         }
 
         if(altitude < 399 && altitude >= 300) {
             console.log(approachingMinimums)
             appMinimumsAudio.play()
+            alert('Approaching Minimums')
         }
 
         if(altitude <= 299 && altitude >= 100) {
             console.log(minimums)
             minimumsAudio.play()
+            alert('Minimums')
         }
 
         if(altitude <= 99) {
             console.log(retard)
             retardAudio.play()
+            alert('Retard! (Land)')
         }
 
     }

@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:,">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airplane</title>
+    <title>Airplane Landing Parameters</title>
 </head>
 <body>
-    <h1>Landing Parameters</h1> <br>
-    <div id="values">
-        <h2>Airspeed</h2>
-        <input type="number" id="input-speed" placeholder="Insert Speed" onfocus="this.value='';">
-        <button id="speedButton">Confirm Speed</button><br>
-        <h2>Altitude</h2>
-        <input type="number" id="input-altitude" placeholder="Insert Altitude" onfocus="this.value='';">
-        <button id="altitudeButton">Confirm Altitude</button>
-    </div>
+
     
-    <script src="airplane.js"></script>
+        
+        <div id="parameters">
+            <h1>Landing Parameters</h1> <br>
+            <h2>Airspeed</h2>
+            <input type="number" id="input-speed" placeholder="Insert Speed" onfocus="this.value='';">
+            <button id="speedButton">Confirm Speed</button><br>
+            <h2>Altitude</h2>
+            <input type="number" id="input-altitude" placeholder="Insert Altitude" onfocus="this.value='';">
+            <button id="altitudeButton">Confirm Altitude</button>
+        </div>
+        
+        <div id="established-values">
+            <h1>Established Values</h1> <br>
+            <h2>Airspeed</h2>
+            <h5>150kn or more > Keep Landing (Auto pilot disconnected warning)</h5>
+            <h5> Less > Airspeed Low!</h5>
+            <h2>Altitude</h2>
+            <h5>400ft or more > Glideslope (out of route) </h5>
+            <h5>300ft to 399ft > Approaching Minimums</h5>
+            <h5>100ft to 299ft > Minimums</h5>
+            <h5>99ft or less > Retard!</h5>
+            
+            
+        </div> 
+
+   
+    
+    
+       
+    
+<script src="airplane.js"></script>
 </body>
 </html>
